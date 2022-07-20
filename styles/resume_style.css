@@ -1,0 +1,17 @@
+html {
+    background-color: rgb(33, 33, 33);
+}
+
+:root{
+    --main-color: #6961CB;
+    --secondary-color: #79dfbd;
+    --gradient-color: linear-gradient(to right, #6961CB, #79dfbd); 
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: auto;
+    background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

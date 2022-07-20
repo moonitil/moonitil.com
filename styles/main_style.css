@@ -1,0 +1,45 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(33, 33, 33);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+:root{
+    --main-color: #6961CB;
+    --secondary-color: #79dfbd;
+    --gradient-color: linear-gradient(to right, #6961CB, #79dfbd); 
+}
+
+nav{
+    background: var(--gradient-color);
+    height: 50px;
+    width: 83%;
+    align-self: center;
+}
+
+li{
+    list-style: none;
+    display: inline;
+    margin-right: 25px;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner{
+    font-size: 220px;
+    background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 100px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+}
