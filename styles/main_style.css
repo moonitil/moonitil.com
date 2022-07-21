@@ -34,12 +34,12 @@ a{
 }
 
 .banner{
-    font-size: 220px;
+    font-size: 165px;
     background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 100px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    align-self: center;
+    text-align: center;
 }

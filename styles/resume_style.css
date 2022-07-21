@@ -15,3 +15,14 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+ul {
+    list-style: none;
+}
+
+ul li::before{
+    content: "\2022";
+    color: var(--gradient-color);
+    font-size: 25px;
+    margin-right: 1rem;
+}
