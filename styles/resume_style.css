@@ -1,5 +1,13 @@
+/* Header Font */
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+/* Text Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
 html {
     background-color: rgb(33, 33, 33);
+    margin: 0;
+    padding: 0;
 }
 
 :root{
@@ -9,14 +17,17 @@ html {
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: auto;
+    margin-top: 30px;
+}
+
+header, article, aside, .centered-header{
+    margin: 0px 30px 0px 30px;
     background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-ul {
+ul{
     list-style: none;
 }
 
@@ -26,3 +37,52 @@ ul li::before{
     font-size: 25px;
     margin-right: 1rem;
 }
+
+h3, p, li{
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.personal-info{
+    text-align: center;
+    border-bottom: none;
+}
+
+.header{
+    font-family: 'Edu VIC WA NT Beginner', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2d2e36;
+}
+
+.centered-header{
+    font-family: 'Edu VIC WA NT Beginner', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+footer{
+    background-color: #2d2e36;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 110px;
+}
+
+.email-form-btn{
+    color: #2d2e36;
+    background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+
+

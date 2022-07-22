@@ -1,7 +1,7 @@
 html {
     margin: 0;
     padding: 0;
-    background-color: rgb(33, 33, 33);
+    background-color: #212121;
 }
 
 body{
@@ -31,6 +31,10 @@ li{
 
 a{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+    color: #212121;
 }
 
 .banner{
