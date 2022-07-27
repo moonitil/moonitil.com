@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 
 /* Text Font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
 html {
     background-color: rgb(33, 33, 33);
@@ -20,7 +20,7 @@ body{
     margin-top: 30px;
 }
 
-header, article, aside, .centered-header{
+header, article, aside, .centered-header, label{
     margin: 0px 30px 0px 30px;
     background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
     -webkit-background-clip: text;
@@ -31,7 +31,7 @@ ul{
     list-style: none;
 }
 
-ul li::before{
+#experience > ul li::before, #skills > ul li::before, #additionalProjects > ul li::before{
     content: "\2022";
     color: var(--gradient-color);
     font-size: 25px;
@@ -67,7 +67,48 @@ footer{
     background-color: #2d2e36;
     text-align: center;
     padding-top: 70px;
-    padding-bottom: 110px;
+    padding-bottom: 70px;
+}
+
+/* Form */
+
+fieldset{
+    border: none;
+}
+
+.form-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 16rem;
+    margin-bottom: -1rem;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-input > label{
+    flex-basis: 10rem;
+    align-self: center;
+}
+
+.input-field, #message{
+    width: 40%;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #3e404d;
+    border: none;
+    color: whitesmoke;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#message{
+    height: 10rem;
 }
 
 .email-form-btn{
