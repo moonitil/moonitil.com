@@ -11,9 +11,11 @@ html {
 }
 
 :root{
-    --main-color: #6961CB;
-    --secondary-color: #79dfbd;
-    --gradient-color: linear-gradient(to right, #6961CB, #79dfbd); 
+    --light-shade: #E9F9F2;
+    --light-accent: #A4DECA;
+    --main-brand-color: #83BFC0;
+    --dark-accent: #5D5A85;
+    --dark-shades: #3C464F;
 }
 
 body{
