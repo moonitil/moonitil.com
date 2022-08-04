@@ -1,5 +1,4 @@
 /* FONTS */
-
 /* Header Font */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;800&display=swap');
 
@@ -7,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
 /* COLORS */
-
 :root{
     --light-shade: #E9F9F2;
     --light-accent: #A4DECA;
@@ -17,7 +15,6 @@
 }
 
 /* BODY */
-
 html, body {
     margin: 0;
     padding: 0;
@@ -28,7 +25,6 @@ body{
 }
 
 /* NAV */
-
 nav{
     height: 10%;
     width: 100%;
@@ -57,7 +53,7 @@ nav{
 .nav-link-list-item{
     list-style: none;
     display: inline;
-    margin-right: 10%;
+    margin-right: 8%;
 }
 
 .nav-link{
@@ -68,7 +64,6 @@ nav{
 }
 
 /* HOME */
-
 header{
     height: 100vh;
     width: 100%;
@@ -134,14 +129,91 @@ header{
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* .main-image-card{
-    background-color: var(--light-shade);
-    width: 38%;
-    height: 460px;
-    float: right;
-    margin-right: 15rem;
-    border-radius: 15px;
-    left: 0rem;
-    position: relative;
-    z-index: 1;
-} */
+/* HORIZONTAL TABLETS */
+@media screen and (max-width: 1200px) {
+    header{
+        height: 620px;
+    }
+
+    .greeting{
+        top: 7rem;
+    }
+    
+    .nav-bar{
+        padding-left: 5%;
+    }
+
+    .quote{
+        font-size: 200%;
+    }
+}
+
+/* VERTICAL TABLETS */
+@media screen and (max-width: 850px) {
+    header{
+        width: 100%;
+    }
+
+    .logo{
+        height: 150%;
+    }
+
+    .nav-bar{
+        margin-left: 4%;
+        padding-left: 3%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .greeting{
+        width: 100%;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .header-image{
+        position: absolute;
+        top: 63%;
+        left: -81%;
+        width: 180%;
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* VERTICAL PHONES */
+@media screen and (max-width: 500px) {
+    .logo{
+        display: none;
+    }
+
+    .nav-bar{
+        flex: 1;
+        margin-right: 4%;
+        padding-inline-start: 6.8%;
+    }
+
+    .nav-link{
+        font-size: 80%;
+    }
+
+    .greeting{
+        margin-top: -20%;
+        width: 90%;
+    }
+
+    .quote{
+        font-size: 160%;
+    }
+
+    .objective{
+        width: 100%;
+    }
+
+    .header-image{
+        top: 75%;
+    }
+}
