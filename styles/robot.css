@@ -73,6 +73,7 @@ body {
     background-color: var(--left-antenna);
     border-radius: 3px;
     border: var(--border);
+    animation: green-light 3s steps(5, start) infinite;
 }
 
 .antenna-ball-right {
@@ -81,6 +82,7 @@ body {
     background-color: var(--right-antenna); 
     border-radius: 3px;
     border: var(--border);
+    animation: blue-light 5s steps(5, start) infinite;
 }
 
 .head {
@@ -124,7 +126,7 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: var(--border);
-    animation: blinking 4s steps(5, start) infinite;
+    animation: blinking 5s steps(5, start) infinite;
 }
 
 .cheeks {
@@ -140,6 +142,7 @@ body {
     background-color: var(--blush);
     border-radius: 10px;
     border: var(--border);
+    animation: blushing 2s steps(5, start) infinite;
 }
 
 .mouth {
@@ -149,6 +152,7 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: var(--border);
+    animation: talking 1s steps(5, start) infinite;
 }
 
 .neck {
@@ -231,6 +235,7 @@ body {
 /* ANIMATIONS */
 
 @keyframes blinking {
+    /* Blink fast, twice */
     0%{
         height: calc(var(--size) * 0px);
     }
@@ -243,6 +248,33 @@ body {
         height: calc(var(--size) * 20px);
     }
 
+    20%{
+        height: calc(var(--size) * 20px);
+    }
+
+    25%{
+        height: calc(var(--size) * 2px);
+    }
+
+    30%{
+        height: calc(var(--size) * 20px);
+    }
+
+    /* Wait */
+    65%{
+        height: calc(var(--size) * 20px);
+    }
+
+    /* Blink again */
+    70%{
+        height: calc(var(--size) * 2px);
+    }
+
+    75%{
+        height: calc(var(--size) * 20px);
+    }
+
+    /* Wait */
     100%{
         height: calc(var(--size) * 20px);
     }
@@ -267,5 +299,77 @@ body {
 
     100%{
         height: calc(var(--size) * 18px);
+    }
+}
+
+@keyframes green-light {
+    0%{
+        box-shadow: none;
+    }
+
+   10%{
+    filter: brightness(130%);
+    box-shadow: -5px -5px 10px #e1f8f4aa, 5px -5px 10px #e1f8f4aa;
+   }
+
+   15%{
+    filter: brightness(100%);
+   }
+
+   20%{
+    box-shadow: none;
+   }
+}
+
+@keyframes blue-light {
+    0%{
+        box-shadow: none;
+    }
+
+   5%{
+    filter: brightness(130%);
+    box-shadow: -5px -5px 8px #e1f8f4aa, 5px -5px 8px #e1f8f4aa;
+   }
+
+   10%{
+    filter: brightness(100%);
+   }
+
+   15%{
+    box-shadow: none;
+   }
+}
+
+@keyframes blushing {
+    50%{
+        filter: brightness(90%);
+    }
+}
+
+@keyframes talking {
+    20%{
+        border-radius: 5px;
+    }
+
+    40%{
+        border-radius: 10px;
+        width: calc(var(--size) * 30px);;
+    }
+
+    60%{
+        width: calc(var(--size) * 24px);
+        height: calc(var(--size) * 15px);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    80%{
+        width: calc(var(--size) * 2px);
+        height: calc(var(--size) * 2px);
+    }
+
+    100%{
+        width: calc(var(--size) * 24px);
+        height: calc(var(--size) * 7px);
     }
 }
