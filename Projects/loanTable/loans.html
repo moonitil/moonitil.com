@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            tr, th, td{
+                border: solid 1px black;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <label for="loanAmount">Loan Amount:</label>
+                <input type="text" name="loanAmount" id="loanAmount">
+            <label for="interestRate">Interest Rate:</label>
+                <input type="text" name="interestRate" id="interestRate">
+            <label for="paymentAmount">Payment Amount:</label>
+                <input type="text" name="paymentAmount" id="paymentAmount">
+            <button type="submit" onclick="createTable()">Submit</button>
+            <script src="createTable.js"></script>
+        </form>
+
+        <table id="loanTable">
+            <tr>
+                <th>Loan Total:</th>
+                <th>Loan Balance:</th>
+            </tr>
+        </table>
+    </body>
+</html>
