@@ -8,6 +8,10 @@ function createTable() {
 
     let loanBalance = loanAmount;
 
+    table.innerHTML = "";
+    let tableHeader = '<tr><th>Loan Amount:</th><th>Loan Balance:</th></tr>';
+    table.insertAdjacentHTML('beforeend', tableHeader);
+
     while (loanBalance > 0) {
         let oldLoanBalance = loanBalance;
         loanBalance = loanBalance - paymentAmount + (interestRate / 120 * loanAmount);
