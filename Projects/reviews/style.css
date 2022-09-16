@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald&display=swap');
+
+body {
+    background-color: whitesmoke;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.reviewCard {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #cecaca,
+        -5px 5px 10px #cecaca;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-decoration: underline 7px #5cabff;
+}
+
+.reviewer {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+.title {
+    color: #5cabff;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.rating {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.review {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    background-color: #5cabff;
+    color: white;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #b1aeae;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn:active{
+    position: relative;
+    top: 1.5px;
+}

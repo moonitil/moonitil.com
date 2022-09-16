@@ -8,13 +8,13 @@ function createTable() {
 
     let loanBalance = loanAmount;
 
-    table.innerHTML = "";
+    table.innerHTML = '';
     let tableHeader = '<tr><th>Loan Amount:</th><th>Loan Balance:</th></tr>';
     table.insertAdjacentHTML('beforeend', tableHeader);
 
     while (loanBalance > 0) {
         let oldLoanBalance = loanBalance;
-        loanBalance = loanBalance - paymentAmount + (interestRate / 120 * loanAmount);
+        loanBalance = loanBalance - paymentAmount + ((interestRate / 1200) * loanAmount);
         
         if (loanBalance > oldLoanBalance){
             alert('Warning! Interest is greater than payment amount!');
