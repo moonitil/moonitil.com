@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bouncy Ball!</title>
+        <style>
+            main {
+                margin-top: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .floor {
+                width: 50%;
+                height: 25px;
+                background-color: #5552e3;
+            }
+
+            .objects {
+                width: 50%;
+                height: 400px;
+                background-color: whitesmoke;
+            }
+            
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                list-style: none;
+                margin-right: 5%;
+               
+            }
+
+            li {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                background-color: #5552e3;
+                border-radius: 50%;
+            }
+
+            .btn {
+                color: white;
+                background-color: #5552e3;
+                border: none;
+                width: 7%;
+                padding: 10px;
+                border-radius: 7px;
+                margin-top: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 17px;
+            }
+
+            .btn:hover {
+                filter: brightness(85%);
+            }
+
+            .btn:active{
+                position: relative;
+                top: 2px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="objects">
+                <ul>
+                    <li name="red" data-color="firebrick"></li>
+                    <li name="orange" data-color="coral"></li>
+                    <li name="yellow" data-color="gold"></li>
+                    <li name="green" data-color="limegreen"></li>
+                    <li name="blue" data-color="dodgerblue"></li>
+                    <li name="indigo" data-color="midnightblue"></li>
+                    <li name="violet" data-color="blueviolet"></li>
+                </ul>
+            </div>
+            <div class="floor"></div>
+            <button class="btn" onclick="startStop();"><span>START</span></button>
+        </main>
+        <script>
+            // Global Variables
+            let myElements = document.querySelectorAll('li');
+            const windowHeight = 350;
+            let boolTTB = true;
+                
+            // Starts/stops bouncing when button is clicked
+            function startStop(){
+                let value = document.querySelector("span");
+                if (value.innerHTML == 'START') {
+                    value.innerHTML = 'STOP';
+                    let animation = window.requestAnimationFrame(bounce);
+                    return
+                }
+
+                value.innerHTML = 'START';
+                window.cancelAnimationFrame(animation);
+                onLoad();
+            }
+            
+            function bounce() {
+                myElements.forEach(element => {
+                    let myTop = parseFloat(element.style.top);
+                    myTop += (boolTTB) ? 5 : -5;
+
+                    // Flip direction
+                    if (myTop >= windowHeight || myTop <= 0){
+                        boolTTB = !boolTTB;
+                    }
+
+                    element.style.top = myTop + "px";
+                });
+
+                window.requestAnimationFrame(bounce);
+            }
+
+            // On Load
+            function onLoad(){
+                // Loads color using dataset 
+                myElements.forEach (element => {
+                    element.style.backgroundColor = element.dataset.color;
+                    // Sets top
+                    element.style.top = "0px";
+                });
+            }
+
+            onLoad();
+        </script>
+    </body>
+</html>
