@@ -1,8 +1,27 @@
-function loadReview()
+//Set up params
+function randomReview(param){
+    loadReview(param);
+} 
+
+function prevReview(param){
+    loadReview(param);
+}
+
+function nextReview(param){
+    loadReview(param);
+}
+
+// Load review
+function loadReview(param)
 {
+    // console.log(param);
+    var params = "direction=" + param;
+
+    // console.log(params);
+
     //Make AJAX call
     let xhr = new XMLHttpRequest();
-    xhr.open("get", "/api/reviews", true);
+    xhr.open("get", "/api/reviews"+"?"+params, true);
     xhr.send();
     xhr.onreadystatechange = function(){
         if(xhr.readyState == xhr.DONE){
@@ -38,8 +57,5 @@ function loadReview()
 //     loadReview();
 // }
 
-function randomReview(){
-   loadReview();
-}
 
-loadReview();
+loadReview('random');
