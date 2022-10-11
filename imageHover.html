@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Hover!</title>
+        <style>
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .image-container {
+                text-align: center;
+            }
+
+            img {
+                border-radius: 25px;
+                height: 87vh;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image-container">
+            <h1>Hover over the image below and watch it change!</h1>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" id="img1" alt="Rain Forest">
+        </div>
+    
+        <script>
+            let img = document.getElementById("img1");
+
+            // Change Image when hovered over
+            img.addEventListener("mouseover", function() {
+                img.src = "https://images.unsplash.com/photo-1496526311033-8a80ae14a1f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            }, false);
+
+            // Change back when mouse moves away
+            img.addEventListener("mouseout", function() {
+                img.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80";
+            }, false);
+        </script>
+    </body>
+</html>
