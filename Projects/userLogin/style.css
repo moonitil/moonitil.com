@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Nunito&display=swap');
+
+/* BACKGROUND */
+
+body {
+    background: #fcffaa;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffa5e1, #fcffaa);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffa5e1, #fcffaa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    /* text-align: center; */
+}
+
+/* CARD */
+
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 15vw;
+}
+
+/* BUTTONS */
+
+.btn {
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn:active {
+    position: relative;
+    top: 2px;
+}
+
+.login-btn {
+    background-color: #f8d376;
+}
+
+.sign-up-btn {
+    background-color: #db36a4;
+}
+
+/* FORMS */
+
+form {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+label {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: #efefef;
+    border: none;
+    height: 20px;
+    border-radius: 8px;
+    outline: none;
+}

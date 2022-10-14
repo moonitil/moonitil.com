@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up or Login!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1 id="greeting">Hello!</h1>
+            <div id="card">
+                <div class="btns" id="btns">
+                    <button class="btn login-btn" onclick="showForm('login');">Login</button>
+                    <button class="btn sign-up-btn" onclick="showForm('signUp')">Sign Up</button>
+                </div>
+                <!-- Login Form -->
+                <form action="" id="login">
+                    <label for="username">Username: <input id="username" type="text"></label>
+                    <label for="password">Password: <input id="password" type="text"></label>
+                    <button class="btn login-btn">Login</button>
+                </form>
+                <!-- Sign Up Form -->
+                <form action="" id="signUp">
+                    <label for="fullName">Full Name: <input id="fullName" type="text"></label>  
+                    <label for="newUsername">Username: <input id="newUsername" type="text"></label>       
+                    <label for="newPassword">Password: <input id="newPassword" type="text"></label>                       
+                    <label for="confirmPassword">Confirm Password: <input id="confirmPassword" type="text"></label>                       
+                    <button class="btn sign-up-btn">Sign Up</button>
+                </form>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
