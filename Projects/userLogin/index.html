@@ -14,18 +14,28 @@
                 </div>
                 <!-- Login Form -->
                 <form action="" id="login">
-                    <label for="username">Username: <input id="username" type="text"></label>
-                    <label for="password">Password: <input id="password" type="text"></label>
-                    <button class="btn login-btn">Login</button>
+                    <label for="username">Username: <input required id="username" type="text"></label>
+                    <label for="password">Password: <input required id="password" type="text"></label>
+                    <div class="login-btns">
+                        <button type="button" class="btn back-btn" onclick="goBack('login');">Back</button>
+                        <button class="btn login-btn" onclick="validateLogin();">Login</button>
+                    </div>
+                    
                 </form>
                 <!-- Sign Up Form -->
                 <form action="" id="signUp">
-                    <label for="fullName">Full Name: <input id="fullName" type="text"></label>  
-                    <label for="newUsername">Username: <input id="newUsername" type="text"></label>       
-                    <label for="newPassword">Password: <input id="newPassword" type="text"></label>                       
-                    <label for="confirmPassword">Confirm Password: <input id="confirmPassword" type="text"></label>                       
-                    <button class="btn sign-up-btn">Sign Up</button>
+                    <label for="fullName">Full Name: <input required id="fullName" type="text"></label>  
+                    <label for="newUsername">Username: <input required id="newUsername" type="text"></label>       
+                    <label for="newPassword">Password: <input required id="newPassword" type="text"></label>                       
+                    <label for="confirmPassword">Confirm Password: <input required id="confirmPassword" type="text"></label> 
+                    <div class="login-btns">
+                        <button type="button" class="btn back-btn" onclick="goBack('signUp');">Back</button>
+                        <button class="btn sign-up-btn" onclick="validateForm();">Sign Up</button>
+                    </div>                      
+                    
                 </form>
+                <!-- Log Out Button -->
+                <button class="btn log-out-btn" id="logOut" onclick="logOut();">Log Out</button>
             </div>
         </main>
         <script src="script.js"></script>

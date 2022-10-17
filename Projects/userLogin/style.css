@@ -18,7 +18,6 @@ h1 {
     color: white;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 5rem;
-    /* text-align: center; */
 }
 
 /* CARD */
@@ -68,6 +67,19 @@ h1 {
 
 .sign-up-btn {
     background-color: #db36a4;
+}
+
+.log-out-btn {
+    display: none;
+    background-color: #ef935d;
+}
+
+.back-btn {
+    background-color: #ef935d;
+}
+
+.login-btns {
+    margin-top: 10px;
 }
 
 /* FORMS */
