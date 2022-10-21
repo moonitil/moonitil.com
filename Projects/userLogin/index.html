@@ -25,12 +25,15 @@
                 <!-- Sign Up Form -->
                 <form action="" id="signUp">
                     <label for="fullName">Full Name: <input required id="fullName" type="text"></label>  
-                    <label for="newUsername">Username: <input required id="newUsername" type="text"></label>       
-                    <label for="newPassword">Password: <input required id="newPassword" type="text"></label>                       
+                    <label for="newUsername">Username: <input required id="newUsername" type="text"></label>
+                    <p class="warning" id="usernameWarning">Username already exists!</p hidden>       
+                    <label for="newPassword">Password: <input required id="newPassword" type="text"></label>    
+                    <p class="warning" id="passwordWarning">Password must contain at least 8 <br> characters, 1 uppercase letter, 1 <br> lowercase letter, 1 number, and <br> cannot contain your username.</p>                   
                     <label for="confirmPassword">Confirm Password: <input required id="confirmPassword" type="text"></label> 
+                    <p class="warning" id="confirmPasswordWarning">Passwords don't match!</p>
                     <div class="login-btns">
                         <button type="button" class="btn back-btn" onclick="goBack('signUp');">Back</button>
-                        <button class="btn sign-up-btn" onclick="validateForm();">Sign Up</button>
+                        <button type="button" class="btn sign-up-btn" id="signUpBtn">Sign Up</button>
                     </div>                      
                     
                 </form>
