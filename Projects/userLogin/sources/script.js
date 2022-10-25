@@ -1,9 +1,12 @@
 // Elements by id
-const newUsername = document.getElementById('newUsername'),
+const newName = document.getElementById('fullName'),
+      newUsername = document.getElementById('newUsername'),
       newPassword = document.getElementById('newPassword'),
-      confirmPassword = document.getElementById('confirmPassword');
+      confirmPassword = document.getElementById('confirmPassword'),
+      
+      signUpForm = document.getElementById('signUp'),
 
-const usernameWarning = document.getElementById('usernameWarning'),
+      usernameWarning = document.getElementById('usernameWarning'),
       passwordWarning = document.getElementById('passwordWarning'),
       confirmPasswordWarning = document.getElementById('confirmPasswordWarning'); 
 
@@ -11,50 +14,15 @@ const usernameWarning = document.getElementById('usernameWarning'),
 newUsername.oninput = checkUsername;
 newPassword.oninput = validatePassword;
 confirmPassword.onchange = comparePasswords;
+signUpForm.onsubmit = submitForm;
 
 // Login
 
-function validateLogin() {
-    event.preventDefault();
-    let username = document.getElementById('username').value,
-        password = document.getElementById('password').value;
-
-    if (username == '' && password == '') {
-        return;
-    }
-
-    // Check array data for matching username
-    for (var i = 0; i < users.length; ++i) {
-        var user = users[i];
-
-        if (user.username == username){
-            userMatch = true;
-            break;
-        }
-    }
-
-    // Check array data for matching password
-    for (var i = 0; i < users.length; ++i) {
-        var user = users[i];
-
-        if (user.password == password){
-            passMatch = true;
-            index = i;
-            break;
-        }
-    }
-
-    // Update page if login successful
-    if (userMatch == true && passMatch == true) {
-        loginSuccess();
-    } else {
-        alert('Login information is incorrect!');
-    }
-}
-
 // Sign Up
-
+    
 // Check to see if username already exists on the server
+var userMatch = false;
+
 function checkUsername() {
     var username = "user=" + newUsername.value;
 
@@ -64,102 +32,61 @@ function checkUsername() {
     xhr.send();
     xhr.onreadystatechange = function(){
         if(xhr.readyState == xhr.DONE){
-        var userMatch = xhr.responseText;
+        var user = xhr.responseText;
 
-            if (userMatch == 'true') {
+            if (user == 'true') {
                 usernameWarning.style.display = 'block';
+                userMatch = true;
             } else {
                 usernameWarning.style.display = 'none';
+                userMatch = false;
             }
         }
     }
 }
 
+// Make sure password meets all requirements
 function validatePassword() {
-    var passMatch = false;
-
     var patterns = {
         "lowercase": /[a-z]/,
         "uppercase": /[A-Z]/,
         "number": /[\d]/
     }
 
-    if(!newPassword.value.includes(newUsername.value) || newUsername.value == '') {
+    // Make sure password doesn't include username
+    if(!newPassword.value.includes(newUsername.value)) {
         for(var key in patterns) {
-            if(patterns[key].test(newPassword.value) && newPassword.value.length >= 8 || newPassword.value == '')
+            // Makes sure password follows set rules and is at least 8 characters
+            if(patterns[key].test(newPassword.value) && newPassword.value.length >= 8)
                 {
                     passwordWarning.style.display = 'none';
-                    passMatch = true;
+                    return true;
                 } else {
                     passwordWarning.style.display = 'block';
-                    passMatch = false;
+                    return false;
                 }
         }  
     }
 }
 
+// Make sure passwords match
 function comparePasswords() {
-    if(newPassword.value != confirmPassword.value && confirmPassword.value != '') {
+    if(newPassword.value != confirmPassword.value) {
         confirmPasswordWarning.style.display = 'block';  
+        return false;
     } else {
         confirmPasswordWarning.style.display = 'none';
+        return true;
     }
 }
 
-// function validateForm() {
-//     event.preventDefault();
-//     let fullName = document.getElementById('fullName').value,
-//         newUsername = document.getElementById('newUsername').value,
-//         newPassword = document.getElementById('newPassword').value,
-//         confirmPassword = document.getElementById('confirmPassword').value;
-    
-//     // Check array data for matching username
-//     for (var i = 0; i < users.length; ++i) {
-//         var user = users[i];
-
-//         if (user.username == newUsername){
-//             userMatch = true;
-//             break;
-//         }
-//     }
-
-//     if (userMatch == true) {
-//         alert('Please enter a unique username!');
-//         newUsername.value = '';
-//         userMatch = false;
-//         return;
-//     }
-
-//     // Check if password meets requirements
-//     if (!newPassword.includes(newUsername)) {
-//         const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g;
-//               result = pattern.test(newPassword);
-
-//         if (result == true && newPassword == confirmPassword) {
-//             createNewUser(fullName, newUsername, newPassword);
-//         } else if (newPassword != confirmPassword) {
-//             alert("Passwords don't match!");
-//         } else {
-//             alert('Password must contain one uppercase letter, one lowercase letter, one number, and 8 characters.');
-//         }
-
-//     } else if (!newPassword == '') {
-//         alert("Password can not contain username!")
-//     }
-// }
- 
-// function createNewUser(fullName, newUsername, newPassword) {
-//     console.log(fullName, newUsername, newPassword);
-//     // Construct new object
-//     var userObject = {};
-//     userObject.name = fullName;
-//     userObject.username = newUsername;
-//     userObject.password = newPassword;
-
-//     // Push to Array
-//     users.push(userObject);
-//     signInSuccess(fullName);
-// }
+function submitForm() {
+    event.preventDefault();
+    console.log(userMatch, validatePassword(), comparePasswords());
+    if(!userMatch && validatePassword() && comparePasswords()) {
+        console.log('pass!');
+    }
+}
 
 // Hide/Show Forms
 
