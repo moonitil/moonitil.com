@@ -28,6 +28,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* GLOBAL STYLES */
@@ -684,7 +685,8 @@ fieldset{
 
     .form-input{
         flex-direction: column;
-        margin: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: -2.5rem;
     }
 
     .form-input > label{
@@ -695,7 +697,6 @@ fieldset{
     }
 
     .input-field, #message{
-        width: 100%;
+        width: 90%;
     }
-
 }
