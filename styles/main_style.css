@@ -542,12 +542,8 @@ fieldset{
 
 /* VERTICAL PHONES */
 @media screen and (max-width: 600px) {
-    /* body{
-        margin: 1rem;
-    } */
-
     /* HOME */
-    .menu-bars{
+    .menu-bars, nav{
         display: none;
     }
 
@@ -629,7 +625,7 @@ fieldset{
     }
 
     .project-link{
-        width: 100%;
+        white-space: nowrap;
     }
 
     /* RESUME */
@@ -663,6 +659,43 @@ fieldset{
 
     .about-header{
         font-size: 1.29rem;
+    }
+
+    /* CONTACT */
+    .fab{
+        font-size: 2.5rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    form{
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    fieldset{
+        margin-left: -3rem;
+        margin-right: 3rem;
+    }
+
+    .form-list{
+        width: 100%;
+    }
+
+    .form-input{
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
+    .form-input > label{
+        flex-basis: 2rem;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    .input-field, #message{
+        width: 100%;
     }
 
 }
