@@ -540,80 +540,22 @@ fieldset{
     margin-top: 20px;
 }
 
-
-/* HORIZONTAL TABLETS */
-@media screen and (max-width: 1200px) {
-    header{
-        height: 620px;
-    }
-
-    .greeting{
-        top: 7rem;
-    }
-    
-    .nav-bar{
-        padding-left: 5%;
-    }
-
-    .quote{
-        font-size: 200%;
-    }
-}
-
-/* VERTICAL TABLETS */
-@media screen and (max-width: 850px) {
-    header{
-        width: 100%;
-    }
-
-    .logo{
-        height: 150%;
-    }
-
-    .nav-bar{
-        margin-left: 4%;
-        padding-left: 3%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .greeting{
-        width: 100%;
-        margin-left: 6%;
-        margin-right: 6%;
-    }
-
-    .header-image{
-        position: absolute;
-        top: 63%;
-        left: -81%;
-        width: 180%;
-    }
-
-    #home{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 /* VERTICAL PHONES */
-@media screen and (max-width: 500px) {
-    .logo{
+@media screen and (max-width: 600px) {
+    /* HOME */
+    .menu-bars{
         display: none;
     }
 
-    .nav-bar{
-        flex: 1;
-        margin-right: 4%;
-        padding-inline-start: 6.8%;
-    }
-
-    .nav-link{
-        font-size: 80%;
+    .logo{
+        width: 20%;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .greeting{
-        margin-top: -20%;
+        margin-top: -7rem;
         width: 90%;
     }
 
@@ -622,10 +564,78 @@ fieldset{
     }
 
     .objective{
+        margin-top: 0;
         width: 100%;
+        font-size: 120%;
     }
 
     .header-image{
-        top: 75%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-image{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        top: 6.5rem;
+    }
+
+    /* SKILLS */
+    .section-header{
+        padding-top: 1rem;
+        font-size: 3rem;
+    }
+
+    .skills-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-img{
+        width: 180%;
+        margin-left: 1.2rem;
+    }
+
+    .skill{
+        width: 210%;
+        margin-left: -0.5rem;
+    }
+
+    .skill-label{
+        font-size: 1.2rem;
+    }
+
+    /* PROJECTS */
+    .col-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col:nth-of-type(3){
+        display: none;
+    }
+
+    .card{
+        margin-top: 4rem;
+    }
+    
+    .card-medium{
+        margin-top: 0;
+    }
+
+    /* RESUME */
+    .resume-container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .resume-container > h3{
+        font-size: 1.5rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .resume-container > ul, p{
+        font-size: 1.15rem;
     }
 }
