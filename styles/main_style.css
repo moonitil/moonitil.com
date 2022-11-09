@@ -685,8 +685,7 @@ fieldset{
 
     .form-input{
         flex-direction: column;
-        margin-left: 0.5rem;
-        margin-right: -2.5rem;
+        margin-left: 0.65rem;
     }
 
     .form-input > label{
@@ -697,6 +696,6 @@ fieldset{
     }
 
     .input-field, #message{
-        width: 90%;
+        width: 90vw;
     }
 }
