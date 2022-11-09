@@ -542,6 +542,10 @@ fieldset{
 
 /* VERTICAL PHONES */
 @media screen and (max-width: 600px) {
+    /* body{
+        margin: 1rem;
+    } */
+
     /* HOME */
     .menu-bars{
         display: none;
@@ -624,6 +628,10 @@ fieldset{
         margin-top: 0;
     }
 
+    .project-link{
+        width: 100%;
+    }
+
     /* RESUME */
     .resume-container{
         margin-left: 1rem;
@@ -638,4 +646,23 @@ fieldset{
     .resume-container > ul, p{
         font-size: 1.15rem;
     }
+
+    /* ABOUT */
+    .title{
+        margin-left: 1rem;
+    }
+
+    .about-spacing{
+        width: 100%;
+    }
+
+    .about-container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .about-header{
+        font-size: 1.29rem;
+    }
+
 }
