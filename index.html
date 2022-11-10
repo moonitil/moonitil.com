@@ -8,19 +8,23 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
         <link rel="stylesheet" href="./styles/main_style.css">
+        <link rel="stylesheet" href="./styles/nav.css">
     </head>
     <body>
-            <nav class="overlay overlay-slide-left " id="overlay">
-            <ul class="nav-bar">
+        <!-- Menu Overlay -->
+        <div class="overlay overlay-slide-left" id="overlay">
+            <!-- Menu Items -->
+            <nav class="nav">
+              <ul>
                 <li id="nav-1" class="slide-out-1"><a class="text dark-text nav-link" href="#home">Home</a></li>
                 <li id="nav-2" class="slide-out-2"><a class="text dark-text nav-link" href="#skills">Skills</a></li>
                 <li id="nav-3" class="slide-out-3"><a class="text dark-text nav-link" href="#projects">Projects</a></li>
                 <li id="nav-4" class="slide-out-4"><a class="text nav-link" href="#resume">Resume</a></li>
                 <li id="nav-5" class="slide-out-5"><a class="text nav-link" href="#about">About</a></li>
                 <li id="nav-6" class="slide-out-6"><a class="text nav-link" href="#contact">Contact</a></li>
-            </ul>
+              </ul>
             </nav>
-        <!-- </div> -->
+          </div>
 
         <!-- Menu Bars -->
         <div class="menu-bars" id="menu-bars">
@@ -32,8 +36,8 @@
 
         <main>
             <section id="home">
-                <img class="logo" src="images/logo.png" alt="logo">
                 <article class="greeting">
+                    <img class="logo" src="images/logo.png" alt="logo">
                     <p class="quote">Hi! My name is Katie, and I <span class="color-text">program and design</span> websites</p>
                     <p class="text objective">I am currently seeking any remote positions where I can design, develop, or improve websites or web applications.</p>
                     <a class="learn-more-btn" href="#resume">LEARN MORE</a>
@@ -51,35 +55,35 @@
                     </aside>
                     <article class="spacing">
                         <ul class="skills-list">
-                            <li class="skill" title="highly proficient">
+                            <li class="skill" title="Highly Proficient">
                                 <label class="text skill-label" for="html">HTML</label>
                                 <meter class="skill-meter" id="html" min="0" max="100" value="100"></meter>
                             </li>
-                            <li class="skill" title="highly proficient">
+                            <li class="skill" title="Highly Proficient">
                                 <label class="text skill-label" for="css">CSS</label>
                                 <meter class="skill-meter" id="css" min="0" max="100" value="100"></meter>
                             </li>
-                            <li class="skill" title="proficient">
+                            <li class="skill" title="Proficient">
                                 <label class="text skill-label" for="js">JavaScript</label>
                                 <meter class="skill-meter" id="js" min="0" max="100" value="75"></meter>
                             </li>
-                            <li class="skill" title="familiar">
+                            <li class="skill" title="Familiar">
                                 <label class="text skill-label" for="js">AutoHotKey</label>
                                 <meter class="skill-meter" id="js" min="0" max="100" value="50"></meter>
                             </li>
-                            <li class="skill" title="acquainted">
+                            <li class="skill" title="Acquainted">
                                 <label class="text skill-label" for="net">C# / .NET</label>
                                 <meter class="skill-meter" id="net" min="0" max="100" value="25"></meter>
                             </li>
-                            <li class="skill" title="acquainted">
+                            <li class="skill" title="Acquainted">
                                 <label class="text skill-label" for="sql">SQL</label>
                                 <meter class="skill-meter" id="sql" min="0" max="100" value="25"></meter>
                             </li>
-                            <li class="skill" title="highly-proficient">
+                            <li class="skill" title="Highly-Proficient">
                                 <label class="text skill-label" for="sql">Fine Art</label>
                                 <meter class="skill-meter" id="sql" min="0" max="100" value="100"></meter>
                             </li>
-                            <li class="skill" title="proficient">
+                            <li class="skill" title="Proficient">
                                 <label class="text skill-label" for="sql">3D Modeling</label>
                                 <meter class="skill-meter" id="sql" min="0" max="100" value="75"></meter>
                             </li>
@@ -165,14 +169,15 @@
                 <h1 class="section-header section-header-light">ABOUT</h1>
                 <p class="text dark-text title">Katherine M. Marranca</p>
                 <div class="about-container">
+                    <img class="headshot-sq" src="images/headshot-sq.jpg" alt="Katherine Marranca">
                     <article class="about-spacing text dark-text">
                         <h3 class="about-header">My History in Software Development</h3>
-                        <p>I began learning programming at the beginning of high school, and gradually it turned from a hobby into my chosen career path. My past experience stems entirely from gig work that I took on over the last few years. I'm hoping to find something more stable in the near future.</p>
+                        <p>I began learning programming at the beginning of high school, and gradually it turned from a hobby into my chosen career path. My past experience stems entirely from gig work that I took on over the last few years. I'm currently seeking either a contract or full-time position.</p>
                         <h3 class="about-header">My Strengths</h3>
                         <p>I am a motivated, independent, and quick-learning Software Developer. I'm the most familiar with web development/design, software troubleshooting, and data parsing and manipulation.</p>
                     </article>
-                    <aside class="">
-                        <img src="" alt="">
+                    <aside>
+                        <img class="headshot" src="images/headshot.jpg" alt="Katherine Marranca">
                     </aside>
                 </div>
             </section>
