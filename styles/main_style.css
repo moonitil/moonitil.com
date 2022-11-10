@@ -25,6 +25,7 @@
     --img-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
     --hover-bright: brightness(110%);
     --hover-dark: brightness(80%);
+    --default-text: 'Nunito', Arial, Helvetica, sans-serif;
 }
 
 /* BODY */
@@ -37,15 +38,14 @@ html, body {
 
 /* GLOBAL STYLES */
 .text{
-    font-size: 140%; 
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; 
+    font-family: var(--default-text);
     color: var(--light-shade);
 }
 
 .dark-text{
     color: var(--dark-shades);
 }
-
 
 .spacing{
     width: 50%;
@@ -99,7 +99,7 @@ html, body {
     padding-top: 1.2rem;
     text-decoration: none;
     color: var(--light-shade);
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-family: var(--default-text);
     box-shadow: var(--img-shadow);
 }
 
@@ -151,10 +151,18 @@ main {
     display: flex;
 }
 
+.skills-container > aside{
+    width: 40%;
+}
+
+.skills-list{
+    width: 100%;
+    margin-left: 1rem;
+}
 
 .skills-img{
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     margin-left: 3.5rem;
     width: 90%;
     border-radius: var(--img-edges);
@@ -163,10 +171,10 @@ main {
 }
 
 .skill{
-    width: 50%;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
+    
 }
 
 .skill:hover{
@@ -174,7 +182,6 @@ main {
 }
 
 .skill-meter{
-    margin-left: 2rem;
     margin-top: 0.35rem;
     width: 12rem;
 }
@@ -185,6 +192,22 @@ main {
 
 .skill-meter::-webkit-meter-optimum-value {
     background: var(--light-accent);
+}
+
+.proficiency{
+    display: none;
+}
+
+.skill:hover + .proficiency{
+    display: flex;
+    justify-content: end;
+    z-index: 10;
+    background-color: #303941;
+    margin-top: -1rem;
+    padding: 0.2rem;
+    padding-right: 0.7rem;
+    color: var(--light-shade);
+    font-family: var(--default-text);
 }
 
 /* PROJECTS */
@@ -384,7 +407,7 @@ fieldset{
     background-color: var(--dark-accent);
     border: none;
     color: var(--light-shade);
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-family: var(--default-text);
     font-size: 18px;
     padding: 5px;
     outline-style: none;
@@ -410,7 +433,7 @@ fieldset{
     height: 60px;
     border-radius: 5px;
     border: none;
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-family: var(--default-text);
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 20px;
@@ -479,7 +502,7 @@ fieldset{
     }
 
     .skill{
-        width: 210%;
+        width: 90%;
         margin-left: -0.5rem;
     }
 
