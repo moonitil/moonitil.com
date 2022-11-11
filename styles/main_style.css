@@ -447,24 +447,36 @@ fieldset{
 /* VERTICAL PHONES */
 @media screen and (max-width: 600px) {
     /* HOME */
-    .menu-bars, nav{
-        display: none;
+    #home{
+        flex-direction: column;
+    }
+
+    #home > article {
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+    #home > aside {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .logo{
-        width: 20%;
+        width: 30%;
         height: auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
 
     .greeting{
-        margin-top: -7rem;
         width: 90%;
+        font-size: 0.9rem;
     }
 
     .quote{
         font-size: 160%;
+        margin-top: 1rem;
     }
 
     .objective{
@@ -473,16 +485,16 @@ fieldset{
         font-size: 120%;
     }
 
-    .header-image{
-        display: flex;
-        flex-direction: column;
-    }
-
     .main-image{
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
-        top: 6.5rem;
+        margin-top: 2rem;
+    }
+
+    .learn-more-btn{
+        height: 2rem;
+        width: 8rem;
     }
 
     /* SKILLS */
@@ -496,9 +508,20 @@ fieldset{
         flex-direction: column;
     }
 
+    .skills-container > aside{
+        width: 100%;
+    }
+
+    .skills-list{
+        width: 90%;
+        padding: 0;
+        margin-left: 2rem;
+    }
+
     .skills-img{
-        width: 180%;
+        width: 90%;
         margin-left: 1.2rem;
+        margin-bottom: 1rem;
     }
 
     .skill{
@@ -507,7 +530,12 @@ fieldset{
     }
 
     .skill-label{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .proficiency{
+        width: 90.5%;
+        margin-left: -0.5rem;
     }
 
     /* PROJECTS */
