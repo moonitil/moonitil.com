@@ -4,24 +4,19 @@ var goBtn = document.getElementById('goBtn'),
 goBtn.addEventListener('click', launchGame);
 
 var count = 1,
-    memory = [];
+    memory = [],
+    clicked = [];
 
 function launchGame() {
-    // goBtn.style.display = 'none';
     message.innerHTML = count;
+    // goBtn.style.display = "none";
     newColor();
-    // var target = document.querySelector(`.${color}`);
     flashColors();
-    // storeColor(color);
-    // guessColor(color);
     // Increment count
     count++;
     console.log(memory);
+    
 }
-
-// function guessColor() {
-//     console.log(color);
-// }
 
 function newColor() {
     var randomColor = Math.floor(Math.random() * 4),
@@ -44,15 +39,38 @@ function newColor() {
 
 function flashColors() {
     memory.forEach((colorValue, i) => {
-        var target = document.querySelector(`.${colorValue}`);
+        setTimeout(() => {    
+            var target = document.querySelector(`.${colorValue}`);
             target.classList.add("flash");
-            setTimeout(function() {
-                target.classList.remove("flash")
+            setTimeout(() => {
+                target.classList.remove("flash");
             }, 1000);
+        }, i * 1500);
     });
+
+    
 }
 
-// function storeColor(color) {
-//     memory.push(color);
-//     // console.log(memory);
-// }
+function clickColor(clickedColor) {
+    clicked.push(clickedColor);
+    console.log(clicked);
+
+    // var divs = document.querySelectorAll('.color');
+        
+    // // Add event listener to each element
+    // divs.forEach(div => {
+    //     div.addEventListener('click', () => {
+    //         // console.log(div.dataset.color);
+    //         clicked.push(div.dataset.color);
+    //         console.log(clicked);
+    //         // checkColors(clicked);
+    //     });
+    // });
+    
+    
+    
+}
+
+function checkColors(clicked) {
+    
+}

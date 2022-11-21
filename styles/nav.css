@@ -1,5 +1,9 @@
+/* Menu Text Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
 body {
     margin: 0;
+    
   }
   
   .navbar {
@@ -177,16 +181,25 @@ body {
     }
   }
   
-  /* --- Menu Bars ------------------------------------ */
+  /* --- Menu Icon ------------------------------------ */
   
-  .menu-bars {
+  .menu-icon {
     position: fixed;
-    top: 1rem;
-    right: 2rem;
     z-index: 8;
-    display: inline;
+    top: 0rem;
+    right: 2rem;
+    display: flex;
     cursor: pointer;
+    align-items: center;
   }
+
+  .menu-title{
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 0.5rem;
+}
   
   .bar {
     width: 35px;
@@ -202,7 +215,7 @@ body {
     }
   
 @media screen and (max-width: 600px) {
-    .menu-bars, nav{
+    .menu-icon {
       display: none;
   }
 }

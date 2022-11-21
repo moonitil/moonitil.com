@@ -26,12 +26,16 @@
             </nav>
           </div>
 
-        <!-- Menu Bars -->
-        <div class="menu-bars" id="menu-bars">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <!-- Menu Icon -->
+        <div class="menu-icon">
+            <h3 class="menu-title">Menu</h3>
+            <div class="menu-bars" id="menu-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
+        
         <script src="scripts/nav.js"></script>
 
         <main>
@@ -39,7 +43,7 @@
                 <article class="greeting">
                     <img class="logo" src="images/logo.png" alt="logo">
                     <p class="quote">Hi! My name is Katie, and I <span class="color-text">program and design</span> websites</p>
-                    <p class="text objective">I am currently seeking any remote positions where I can design, develop, or improve websites or web applications.</p>
+                    <p class="text objective">I'm currently seeking remote positions that will allow me to develop user interfaces for websites and web applications using React.js.</p>
                     <a class="learn-more-btn" href="#resume">LEARN MORE</a>
                 </article>
                 <aside class="header-image">
@@ -55,46 +59,87 @@
                     </aside>
                     <article>
                         <ul class="skills-list">
-                            <li class="skill">
-                                <label class="text skill-label" for="html">HTML</label>
-                                <meter class="skill-meter" id="html" min="0" max="100" value="100"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="html">HTML</label>
+                                    <meter class="skill-meter" id="html" min="0" max="100" value="100"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Highly Proficient</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Highly Proficient</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="css">CSS</label>
-                                <meter class="skill-meter" id="css" min="0" max="100" value="100"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="css">CSS</label>
+                                    <meter class="skill-meter" id="css" min="0" max="100" value="100"></meter>    
+                                </div>
+                                <div class="proficiency">
+                                    <p>Highly Proficient</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Highly Proficient</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="js">JavaScript</label>
-                                <meter class="skill-meter" id="js" min="0" max="100" value="75"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="js">JavaScript</label>
+                                    <meter class="skill-meter" id="js" min="0" max="100" value="75"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Proficient</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Proficient</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="js">AutoHotKey</label>
-                                <meter class="skill-meter" id="js" min="0" max="100" value="50"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="js">AutoHotKey</label>
+                                    <meter class="skill-meter" id="js" min="0" max="100" value="50"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Familiar</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Familiar</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="net">C# / .NET</label>
-                                <meter class="skill-meter" id="net" min="0" max="100" value="25"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="net">C# / .NET</label>
+                                    <meter class="skill-meter" id="net" min="0" max="100" value="25"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Acquainted</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Acquainted</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="sql">SQL</label>
-                                <meter class="skill-meter" id="sql" min="0" max="100" value="25"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="sql">SQL</label>
+                                    <meter class="skill-meter" id="sql" min="0" max="100" value="25"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Acquainted</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Acquainted</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="sql">Fine Art</label>
-                                <meter class="skill-meter" id="sql" min="0" max="100" value="100"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="react">React.js</label>
+                                    <meter class="skill-meter" id="react" min="0" max="100" value="50"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Familiar</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Highly Proficient</span>
-                            <li class="skill">
-                                <label class="text skill-label" for="sql">3D Modeling</label>
-                                <meter class="skill-meter" id="sql" min="0" max="100" value="75"></meter>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="sql">Fine Art</label>
+                                    <meter class="skill-meter" id="sql" min="0" max="100" value="100"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Highly Proficient</p>
+                                </div>
                             </li>
-                                <span class="proficiency">Proficient</span>
+                            <li>
+                                <div class="skill">
+                                    <label class="text skill-label" for="sql">3D Modeling</label>
+                                    <meter class="skill-meter" id="sql" min="0" max="100" value="75"></meter>
+                                </div>
+                                <div class="proficiency">
+                                    <p>Proficient</p>
+                                </div>
+                            </li>
                         </ul>
                     </article>
                 </div>
@@ -114,13 +159,16 @@
                                 <p class="text project-text">An animated robot built in HTML and CSS.</p>
                             </div>
                             <div class="card card-light">
-                                
+                                <a href="Projects/simonSays/index.html">
+                                    <img class="project-img" src="images/projects/simon.jpg" alt="Simon Says Preview">
+                                </a> 
+                                <p class="text project-text">A Simon Says game built HTML, CSS, and JavaScript.</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card card-medium">
                                 <a href="Projects/quoteGenerator/index.html">
-                                    <img class="project-img" src="images/projects/quotes.jpg" alt="Quotes Preview">
+                                    <img class="project-img" src="images/projects/quotes.jpg" alt="Quote Generator Preview">
                                 </a> 
                                 <p class="text project-text">Web app that pulls random quotes from an API.</p>
                             </div>
@@ -149,18 +197,18 @@
                 <h1 class="section-header">RESUME</h1>
                 <article class="text resume-container">
                     <h2>Experience</h2>
-                        <h3>RMM Solutions, Freelance Contractor: Dec 2019 - Feb 2022</h3>
+                        <h3>RMM Solutions, Freelance Contractor: Dec 2019 - Current</h3>
                         <ul>
                             <li>Created a JavaScript web app to pull specific values from a JSON object API and display them in a dynamically generated table.</li>
                             <li>Wrote a Web Scraper script in AutoHotKey to take information from one web browser window and transfer it into specific text fields of a form on another web browser.</li>
                             <li>Recorded and edited a tutorial video on how to use the Web Scraper.</li>
                             <li>Programmed a C# app to send out a daily automated email containing all customer orders made on the website that day and the information or alteration of those orders. This information is stored in a formatted table that varies in length depending on the number of orders.</li>
                         </ul>
-                        <h3>MSS, Freelance Contractor: Oct 2020 - Feb 2021</h3>
+                        <!-- <h3>MSS, Freelance Contractor: Oct 2020 - Feb 2021</h3>
                         <ul>
                             <li>Created an account system for the project website CruiserDirect, allowing users to create an account and then log in, sign out, or delete that account when they please.</li>
                             <li>Stored and manipulated CruiserDirect account data in an SQL database.</li>
-                        </ul>
+                        </ul> -->
                     <h2>Certifications</h2>
                         <h3>Certiport Information Technology Specialist</h3>
                             <p>JavaScript - Nov 2022</p>
@@ -180,9 +228,9 @@
                     <img class="headshot-sq" src="images/headshot-sq.jpg" alt="Katherine Marranca">
                     <article class="about-spacing text dark-text">
                         <h3 class="about-header">My History in Software Development</h3>
-                        <p>I began learning programming at the beginning of high school, and gradually it turned from a hobby into my chosen career path. My past experience stems entirely from gig work that I took on over the last few years. I'm currently seeking either a contract or full-time position.</p>
+                        <p>I began learning to code at the beginning of high school, and gradually it turned from a hobby into my chosen career path. My past experience stems entirely from gig work that I took on over the last few years. I'm currently seeking a remote contract or full-time position.</p>
                         <h3 class="about-header">My Strengths</h3>
-                        <p>I am a motivated, independent, and quick-learning Software Developer. I'm the most familiar with web development/design, software troubleshooting, and data parsing and manipulation.</p>
+                        <p>I am a motivated, independent, and quick-learning software developer. I'm the most familiar with web development/design, UI development/design, software troubleshooting, and data parsing and manipulation.</p>
                     </article>
                     <aside>
                         <img class="headshot" src="images/headshot.jpg" alt="Katherine Marranca">
@@ -194,10 +242,23 @@
                 <section class="section-dark" id="contact">
                     <div class="contacts">
                         <h1 class="section-header">CONTACT</h1>
-                        <a href="https://github.com/moonitil"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/katherine-marranca-9911b322b/"><i class="fab fa-linkedin"></i></a>
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/katherine-marranca-9911b322b/">
+                                    <i class="fab fa-linkedin"></i>
+                                    <p class="text">LinkedIn</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/moonitil">
+                                    <i class="fab fa-github"></i>
+                                    <p class="text">GitHub</p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <form action="#" method>
+                    <!-- Form to send messages to a database -->
+                    <!-- <form action="#" method>
                         <fieldset>
                             <ul class="form-list">
                                 <li class="text form-input">
@@ -224,7 +285,10 @@
                             
                         </fieldset>
                         <input type="submit" class="email-form-btn" value="Send Message">                  
-                    </form>
+                    </form> -->
+                    <p class="text rights">
+                        © Copyright 2022 Katherine Marranca
+                    </p>
                 </section>
             </footer>
         </main>

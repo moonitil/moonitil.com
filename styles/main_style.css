@@ -52,6 +52,8 @@ html, body {
 }
 
 /* HOME */
+
+
 #home{
     height: 100vh;
     background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
@@ -152,12 +154,7 @@ main {
 }
 
 .skills-container > aside{
-    width: 40%;
-}
-
-.skills-list{
-    width: 100%;
-    margin-left: 1rem;
+    width: 45%;
 }
 
 .skills-img{
@@ -170,11 +167,24 @@ main {
     box-shadow: var(--img-shadow);
 }
 
+.skills-container > article{
+    width: 55%;
+}
+
+.skills-list{
+    list-style: none;
+    margin-right: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    padding: 0;
+    margin-left: 5%;
+}
+
 .skill{
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
-    
+    align-items: center;
+    padding: 0.5rem; 
 }
 
 .skill:hover{
@@ -182,7 +192,6 @@ main {
 }
 
 .skill-meter{
-    margin-top: 0.35rem;
     width: 12rem;
 }
 
@@ -196,16 +205,20 @@ main {
 
 .proficiency{
     display: none;
+   
+    width: 100%;
+}
+
+.proficiency > p {
+    margin: 0;
+    padding-right: 0.5rem;
+    margin-top: -1rem;
 }
 
 .skill:hover + .proficiency{
     display: flex;
-    justify-content: end;
-    z-index: 10;
+    justify-content: flex-end;
     background-color: #303941;
-    margin-top: -1rem;
-    padding: 0.2rem;
-    padding-right: 0.7rem;
     color: var(--light-shade);
     font-family: var(--default-text);
 }
@@ -350,21 +363,52 @@ h2{
 /* CONTACT */
 .contacts{
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .fab{
-    margin-left: 2rem;
-    margin-top: 2rem;
     color: var(--light-shade);
     font-size: 4rem;
+    margin-bottom: -1rem;
+    text-align: center;
 }
 
-.fab:hover{
+
+
+.contacts > ul {
+    list-style: none;
+    display: flex;
+    align-self: center;
+    width: 20%;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.contacts > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contacts > ul > li > a:hover{
     filter: var(--hover-dark);
 }
 
-form{
+.contacts > ul > li > a > p {
+    font-size: 1rem;
+}
+
+p.rights {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+/* form{
     text-align: center;
     padding-top: 70px;
     padding-bottom: 70px;
@@ -442,7 +486,7 @@ fieldset{
 
 .email-form-btn:hover{
     filter: var(--hover-bright);
-}
+} */
 
 /* VERTICAL PHONES */
 @media screen and (max-width: 600px) {
@@ -513,6 +557,7 @@ fieldset{
     }
 
     .skills-list{
+        grid-template-columns: repeat(auto-fill, minmax(95vw, 1fr));
         width: 90%;
         padding: 0;
         margin-left: 2rem;
@@ -534,7 +579,7 @@ fieldset{
     }
 
     .proficiency{
-        width: 90.5%;
+        width: 94%;
         margin-left: -0.5rem;
     }
 
@@ -608,12 +653,15 @@ fieldset{
 
     /* CONTACT */
     .fab{
-        font-size: 2.5rem;
-        margin-left: 1rem;
+        font-size: 3rem;
         margin-top: 1rem;
     }
 
-    form{
+    .contacts > ul {
+        width: 100%;
+    }
+
+    /* form{
         padding-top: 0;
         padding-bottom: 50px;
     }
@@ -641,5 +689,5 @@ fieldset{
 
     .input-field, #message{
         width: 90vw;
-    }
+    } */
 }
