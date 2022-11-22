@@ -52,8 +52,6 @@ html, body {
 }
 
 /* HOME */
-
-
 #home{
     height: 100vh;
     background: -webkit-linear-gradient(left, #6961CB, #79dfbd);
@@ -226,21 +224,15 @@ main {
 /* PROJECTS */
 .projects-container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cards-container{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-}
-
-.col{
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+    justify-items: center;
 }
 
 .card{
@@ -278,6 +270,7 @@ main {
 
 .project-img:hover{
     filter: var(--hover-dark);
+    transform: scale(1.05);
 }
 
 .project-text{
@@ -287,8 +280,6 @@ main {
 
 .project-link{
     margin-top: 2rem;
-    margin-bottom: -1rem;
-    position: relative;
     z-index: 3;
 }
 
@@ -373,13 +364,11 @@ h2{
     text-align: center;
 }
 
-
-
 .contacts > ul {
     list-style: none;
     display: flex;
     align-self: center;
-    width: 20%;
+    width: 25%;
     justify-content: space-evenly;
     padding: 0;
 }
@@ -393,6 +382,7 @@ h2{
 
 .contacts > ul > li > a:hover{
     filter: var(--hover-dark);
+    transform: scale(1.1);
 }
 
 .contacts > ul > li > a > p {
@@ -584,25 +574,16 @@ fieldset{
     }
 
     /* PROJECTS */
-    .col-container{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .col:nth-of-type(3){
-        display: none;
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 
     .card{
         margin-top: 4rem;
     }
-    
-    .card-medium{
-        margin-top: 0;
-    }
 
-    .project-link{
-        white-space: nowrap;
+    .card:nth-of-type(4), .card:nth-of-type(5) ~ div {
+        display: none;
     }
 
     /* RESUME */

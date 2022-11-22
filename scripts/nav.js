@@ -1,5 +1,7 @@
-const menuBars = document.getElementById('menu-bars');
+const body = document.getElementById('body');
 const overlay = document.getElementById('overlay');
+const menuBars = document.getElementById('menu-icon');
+
 const nav1 = document.getElementById('nav-1');
 const nav2 = document.getElementById('nav-2');
 const nav3 = document.getElementById('nav-3');
@@ -16,8 +18,6 @@ function navAnimation(direction1, direction2) {
 }
 
 function toggleNav() {
-    // Toggle: Fade Menu Bars
-    menuBars.classList.toggle('change');
     // Toggle: Menu Active
     overlay.classList.toggle('overlay-active');
     if (overlay.classList.contains('overlay-active')) {
@@ -33,8 +33,23 @@ function toggleNav() {
     }
 }
 
+function clickOffNav(event) {
+    console.log(event.target.id);
+    if (event.target.id === 'menu-bars') {
+        console.log('open menu');
+    } else if (overlay.classList.contains('overlay-active')) {
+        console.log('shift out');
+        // Animate In - Overlay 
+        overlay.classList.replace('overlay-slide-right', 'overlay-slide-left')
+        // Animate In - Nav Items
+        navAnimation('out', 'in');
+        overlay.classList.toggle('overlay-active');
+    }
+}
+
 // Event Listeners
 menuBars.addEventListener('click', toggleNav);
 navItems.forEach((nav) => {
     nav.addEventListener('click', toggleNav);
 });
+body.onclick = clickOffNav;

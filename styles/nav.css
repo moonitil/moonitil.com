@@ -203,7 +203,7 @@ body {
   
   .bar {
     width: 35px;
-    height: 2px;
+    height: 2.5px;
     background-color: #fff;
     margin: 8px 0;
     transition: 0.4s;

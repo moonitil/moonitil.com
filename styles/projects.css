@@ -1,0 +1,15 @@
+.project-section {
+    font-size: 2.2rem;
+    width: 90%;
+}
+
+.card {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .project-section {
+        font-size: 1.7rem;
+    }
+}
